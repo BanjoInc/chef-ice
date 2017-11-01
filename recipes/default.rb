@@ -17,10 +17,6 @@
 # limitations under the License.
 #
 
-include_recipe 'chef-sugar'
-
-include_recipe 'apt' if debian?
-
 include_recipe 'java'
 include_recipe 'tomcat'
 include_recipe 'logrotate'
@@ -106,5 +102,3 @@ logrotate_app node['tomcat']['base_instance'] do
   create "640 #{node['tomcat']['base_instance']} adm"
   options %w( copytruncate compress missingok )
 end
-
-include_recipe 'ice::nginx' if node['ice']['reader']['enabled'] == true && node['ice']['nginx_enabled']

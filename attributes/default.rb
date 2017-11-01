@@ -137,26 +137,6 @@ node.default['ice']['weeklyCostEmails_numWeeks']            = nil
 # proxy on Ice readers/UI nodes.
 node.default['ice']['public_hostname']                      = nil
 
-# Setup Nginx.
-node.default['ice']['nginx_enabled']                        = true
-
-# Disable Nginx default site.
-node.default['ice']['nginx_disable_default_site']           = true
-
-# Nginx port configuration.
-node.default['ice']['nginx_port']                           = 80
-
-# Nginx site configuration chef template name.
-node.default['ice']['nginx_config']                         = 'nginx_ice_site.erb'
-
-# Nginx custom configuration cookbook.  Use this if you'd like to bypass the
-# default ice cookbook nginx configuration and implement your own templates
-# and recipes to configure Nginx for ice.
-node.default['ice']['nginx_config_cookbook']                = 'ice'
-
-# Whether nginx should route all requests to Tomcat, regardless of Host: header.  Default: false.
-node.default['ice']['nginx_default_server']                 = false
-
 # How often to rotate catalina.out.
 node.default['ice']['logrotate_frequency']                  = 'weekly'
 

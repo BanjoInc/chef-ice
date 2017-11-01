@@ -13,7 +13,7 @@ version          '0.2.14'
 end
 
 # Cookbook dependencies
-%w( java apt nginx openssl logrotate chef-sugar ).each do |cb|
+%w( java apt openssl logrotate chef-sugar ).each do |cb|
   depends cb
 end
 
