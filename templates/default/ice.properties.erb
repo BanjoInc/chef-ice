@@ -64,3 +64,7 @@ ice.<%= prop %>=<%= node['ice'][prop] %>
 end
 end
 %>
+
+<% node['ice']['additional_properties'].each_pair do |key, value|  %>
+<%= key %>=<%= value %>
+<% end %>

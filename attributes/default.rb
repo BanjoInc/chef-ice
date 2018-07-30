@@ -142,3 +142,6 @@ node.default['ice']['logrotate_frequency']                  = 'weekly'
 
 # How many rotated copies of catalina.out to keep.
 node.default['ice']['logrotate_rotate']                     = 52
+
+# Additional ice properties
+node.default['ice']['additional_properties']                = {}
